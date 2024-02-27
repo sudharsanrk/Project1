@@ -20,7 +20,7 @@ public class TextCase extends Baseclass
 	@Test
 public void Tc1() throws InterruptedException, IOException
 {
-	 test = extent.createTest("Tc1");
+	// test = extent.createTest("Tc1");
 	Homepage Home = new Homepage(driver);
 	  Home.frombuton();
 	  Home.Delhielement();

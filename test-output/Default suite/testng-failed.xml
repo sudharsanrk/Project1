@@ -5,10 +5,10 @@
     <classes>
       <class name="Scripts.TextCase">
         <methods>
+          <include name="closeapp"/>
           <include name="as"/>
           <include name="Tc1"/>
           <include name="openapp"/>
-          <include name="bs"/>
         </methods>
       </class> <!-- Scripts.TextCase -->
     </classes>

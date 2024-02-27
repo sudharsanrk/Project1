@@ -32,7 +32,7 @@ public ExtentTest test;
 
  Libaries li    =   new Libaries();
 
-        @BeforeSuite
+   @BeforeSuite
        public void bs()
        {
         htmlReporter = new ExtentHtmlReporter("./reports/testReport.html");
@@ -41,18 +41,17 @@ public ExtentTest test;
 	    extent = new ExtentReports();
 	    extent.attachReporter(htmlReporter);
        }
- 
-		@BeforeMethod
+   
+ 	@BeforeMethod
 		public void openapp() throws IOException
 		
 		{ 
-
-				
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-	       options.addArguments("--disable-notifications");
+		WebDriverManager.chromedriver().clearDriverCache().setup();
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-notifications");
 			
 		    driver=new ChromeDriver(options);
+			driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get(li.PropertiesFile("Url"));
 			driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS );
